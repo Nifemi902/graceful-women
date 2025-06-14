@@ -1,0 +1,120 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffafa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  max-height: 80px;
+  margin-top: 10px;
+}
+
+header {
+  text-align: center;
+  background: #f9dce2;
+  padding: 1rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #b14e6e;
+  font-weight: bold;
+}
+
+.welcome, .video-intro, .testimonials {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff7f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.welcome h2, .testimonials h3, .video-intro h3 {
+  color: #b14e6e;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 5px solid #b14e6e;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.verse-of-the-day {
+  margin: 2rem auto;
+  text-align: center;
+  background: #fef4f8;
+  padding: 1rem;
+  border-left: 5px solid #b14e6e;
+  font-style: italic;
+}
+
+.blog-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff7f9;
+  border-radius: 10px;
+}
+
+.blog-container h2 {
+  color: #b14e6e;
+  text-align: center;
+}
+
+.blog-container article {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.devotionals-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff4f8;
+  border-radius: 10px;
+}
+
+.devo-box {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #fff;
+  border-left: 5px solid #b14e6e;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.form-section {
+  max-width: 400px;
+  margin: 3rem auto;
+  background: #fff7fa;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.form-section input {
+  width: 90%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-section button {
+  background: #b14e6e;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-section button:hover {
+  background: #a03f5f;
+}

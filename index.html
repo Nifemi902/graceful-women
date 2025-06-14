@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Graceful Women</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="grace 2.jpg " alt="Graceful Women Logo" class="logo" />
+    <h1>Graceful Women Ministry</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="devotionals.html">Devotionals</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <h2>Welcome to Graceful Women</h2>
+      <p>
+        We're so glad you're here! Graceful Women is a Christ-centered space where women are
+        encouraged to grow in faith, purpose, and community. Whether you're seeking inspiration,
+        daily devotionals, heartfelt prayers, or empowering blog stories—this is your home.
+      </p>
+      <p><em>“She is clothed with strength and dignity; she can laugh at the days to come.” – Proverbs 31:25</em></p>
+      <p>Join us as we grow together in grace, love, and wisdom.</p>
+    </section>
+
+    <section class="video-intro">
+      <h3>A Message from the Ministry</h3>
+      <video controls width="600">
+        <source src="https://www.youtube.com/watch?v=sTfRYtN1coE" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section class="testimonials">
+      <h3>What Sisters Are Saying</h3>
+      <blockquote>
+        “This ministry has changed my life. I feel closer to God every day.”
+        <footer>— Sarah J., Nairobi</footer>
+      </blockquote>
+    </section>
+    <script>
+        fetch('/bible-verses.json')
+          .then(res => res.json())
+          .then(verses => {
+            const today = new Date().toISOString().split('T')[0];
+            const verse = verses.find(v => v.date === today);
+            document.getElementById('dailyVerse').textContent = verse ? verse.verse : 'No verse available today.';
+          });
+      </script>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Graceful Women Ministry | All rights reserved.</p>
+  </footer>
+</body>
+</html>
+ 

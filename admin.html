@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin – Upload Devotional</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h2>Post a New Devotional</h2>
+  <form id="devotionalForm">
+    <input type="date" id="date" required><br>
+    <input type="text" id="title" placeholder="Title" required><br>
+    <input type="text" id="scripture" placeholder="Scripture" required><br>
+    <textarea id="message" placeholder="Devotional message" required></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('devotionalForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      fetch('/add-devotional', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          date: document.getElementById('date').value,
+          title: document.getElementById('title').value,
+          scripture: document.getElementById('scripture').value,
+          message: document.getElementById('message').value
+        })
+      }).then(res => res.text()).then(msg => alert(msg));
+    });
+  </script>
+</body>
+</html>
